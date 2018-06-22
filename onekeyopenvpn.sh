@@ -38,10 +38,10 @@ cp /etc/openvpn/easy-rsa/3.0.3/pki/issued/server.crt /etc/openvpn/
 cp /etc/openvpn/easy-rsa/3.0.3/pki/dh.pem /etc/openvpn/dh2048.pem
 cp /etc/openvpn/easy-rsa/3.0.3/pki/private/server.key /etc/openvpn/
 cp /etc/openvpn/easy-rsa/3.0.3/ta.key /etc/openvpn/
-cp /etc/openvpn/easy-rsa/3.0.3/pki/issued/client1.crt /etc/openvpn/clients
-cp /etc/openvpn/easy-rsa/3.0.3/ta.key /etc/openvpn/clients
-cp /etc/openvpn/easy-rsa/3.0.3/pki/ca.crt /etc/openvpn/clients
-cp /etc/openvpn/easy-rsa/3.0.3/pki/private/client1.key /etc/openvpn/clients
+cp /etc/openvpn/easy-rsa/3.0.3/pki/issued/client1.crt /etc/openvpn/client/
+cp /etc/openvpn/easy-rsa/3.0.3/ta.key /etc/openvpn/client/
+cp /etc/openvpn/easy-rsa/3.0.3/pki/ca.crt /etc/openvpn/client/
+cp /etc/openvpn/easy-rsa/3.0.3/pki/private/client1.key /etc/openvpn/client/
 
 
 
