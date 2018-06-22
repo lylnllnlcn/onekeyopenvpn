@@ -72,7 +72,7 @@ curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/
 mkdir /usr/src/udp
 cd /usr/src/udp
 curl -o speederv2 https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/speederv2
-curl -o udp2raw https://github.com/yobabyshark/onekeyopenvpn/raw/master/udp2raw
+curl -o udp2raw https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/udp2raw
 chmod +x speederv2 udp2raw
 
 #启动udpspeeder和udp2raw
