@@ -68,5 +68,10 @@ cd /etc/openvpn
 rm -f server.conf
 curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/server.conf
 
+#启动udpspeeder和udp2raw
+
+
+#启动openvpn
+systemctl start openvpn@server
 
 
