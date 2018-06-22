@@ -53,7 +53,7 @@ systemctl enable iptables
 systemctl start iptables 
 
 #清除规则
-iptalbes -F
+iptables -F
 iptables -t nat -A POSTROUTING -s 10.8.0.0/16 ! -d 10.8.0.0/16 -j MASQUERADE
 service iptables save
 
