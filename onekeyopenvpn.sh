@@ -64,5 +64,9 @@ echo 1 > /proc/sys/net/ipv4/ip_forward
 echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 
 #配置服务端server.conf
+cd /etc/openvpn
+rm -f server.conf
+curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/server.conf
+
 
 
