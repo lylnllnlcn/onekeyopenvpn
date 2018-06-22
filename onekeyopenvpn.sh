@@ -54,5 +54,15 @@ systemctl start iptables
 
 #清除规则
 iptalbes -F
+iptables -t nat -A POSTROUTING -s 10.8.0.0/16 ! -d 10.8.0.0/16 -j MASQUERADE
 service iptables save
+
+#启用转发
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+#永久转发
+echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
+
+#配置服务端server.conf
+
 
