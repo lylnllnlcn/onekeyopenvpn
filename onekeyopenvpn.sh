@@ -43,6 +43,16 @@ cp /etc/openvpn/easy-rsa/3.0.3/ta.key /etc/openvpn/client/
 cp /etc/openvpn/easy-rsa/3.0.3/pki/ca.crt /etc/openvpn/client/
 cp /etc/openvpn/easy-rsa/3.0.3/pki/private/client1.key /etc/openvpn/client/
 
+#关闭firewalld
+systemctl stop firewalld
+systemctl disable firewalld
 
+#安装iptables
+yum install -y iptables-services 
+systemctl enable iptables 
+systemctl start iptables 
 
+#清除规则
+iptalbes -F
+service iptables save
 
