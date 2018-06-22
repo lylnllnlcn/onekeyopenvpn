@@ -71,7 +71,7 @@ curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/
 #下载udpspeeder和udp2raw （amd64版）
 mkdir /usr/src/udp
 cd /usr/src/udp
-curl -o udpspeederv2 https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/speederv2
+curl -o speederv2 https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/speederv2
 curl -o udp2raw https://github.com/yobabyshark/onekeyopenvpn/raw/master/udp2raw
 
 #启动udpspeeder和udp2raw
