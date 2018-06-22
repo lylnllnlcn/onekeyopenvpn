@@ -19,14 +19,29 @@ cp -f /usr/share/doc/easy-rsa-3.0.3/vars.example /etc/openvpn/easy-rsa/3.0.3/var
 
 cd /etc/openvpn/easy-rsa/3.0.3/
 
+#生成ta.key
+openvpn --genkey --secret ta.key
 #创建pki目录
 ./easyrsa init-pki
-
 #生成证书
-./easyrsa --batch "--req-cn=gamer" build-ca nopass
-
+./easyrsa --batch build-ca nopass
 #生成服务端证书
-./easyrsa --batch "--req-cn=gamer" gen-req server nopass
+./easyrsa --batch build-server-full server nopass
+#生成客户端端证书
+./easyrsa --batch build-client-full client1 nopass
+#生成gen
+./easyrsa gen-dh
+
+#管理证书位置
+cp /etc/openvpn/easy-rsa/3.0.3/pki/ca.crt /etc/openvpn/
+cp /etc/openvpn/easy-rsa/3.0.3/pki/issued/server.crt /etc/openvpn/
+cp /etc/openvpn/easy-rsa/3.0.3/pki/dh.pem /etc/openvpn/dh2048.pem
+cp /etc/openvpn/easy-rsa/3.0.3/pki/private/server.key /etc/openvpn/
+cp /etc/openvpn/easy-rsa/3.0.3/ta.key /etc/openvpn/
+cp /etc/openvpn/easy-rsa/3.0.3/pki/issued/client1.crt /etc/openvpn/clients
+cp /etc/openvpn/easy-rsa/3.0.3/ta.key /etc/openvpn/clients
+cp /etc/openvpn/easy-rsa/3.0.3/pki/ca.crt /etc/openvpn/clients
+cp /etc/openvpn/easy-rsa/3.0.3/pki/private/client1.key /etc/openvpn/clients
 
 
 
