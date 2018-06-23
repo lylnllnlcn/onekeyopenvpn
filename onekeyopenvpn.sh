@@ -68,6 +68,9 @@ cd /etc/openvpn
 rm -f server.conf
 curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/server.conf
 
+#将openvpn客户端文件下载到client
+curl -o /etc/openvpn/client/client.ovpn https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/client.ovpn
+
 #下载udpspeeder和udp2raw （amd64版）
 mkdir /usr/src/udp
 cd /usr/src/udp
