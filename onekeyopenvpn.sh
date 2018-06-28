@@ -5,6 +5,9 @@
 #安装epel源
 yum -y install epel-release
 
+#启用epel
+sed -i "s/enabled=0/enabled=1/" /etc/yum.repos.d/epel.repo
+
 #安装openvpn
 yum -y install openvpn-2.4.6-1.el7 easy-rsa-3.0.3-1.el7
 
