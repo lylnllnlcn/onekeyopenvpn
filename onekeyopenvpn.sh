@@ -3,6 +3,9 @@
 #适用centos7
 
 #安装epel源
+yum -y install wget
+wget http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm
+rpm -ivh epel-release-7-11.noarch.rpm
 yum -y install epel-release
 
 #启用epel
@@ -75,8 +78,8 @@ curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/
 curl -o /etc/openvpn/client/client.ovpn https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/client.ovpn
 
 #下载客户端udp程序
-curl -o /etc/openvpn/client/udp2raw.exe https://github.com/yobabyshark/onekeyopenvpn/raw/master/udp2raw.exe
-curl -o /etc/openvpn/client/speederv2.exe https://github.com/yobabyshark/onekeyopenvpn/raw/master/speederv2.exe
+wget -P /etc/openvpn/client/ https://github.com/yobabyshark/onekeyopenvpn/raw/master/udp2raw.exe
+wget -P /etc/openvpn/client/ https://github.com/yobabyshark/onekeyopenvpn/raw/master/speederv2.exe
 
 #下载客户端脚本
 curl -o /etc/openvpn/client/client_pre.bat https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/client_pre.bat
