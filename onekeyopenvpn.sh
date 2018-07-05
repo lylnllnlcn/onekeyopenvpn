@@ -84,7 +84,7 @@ curl -o /etc/openvpn/client/client_down.bat https://raw.githubusercontent.com/yo
 
 #修改client_pre脚本ip
 serverip=$(curl icanhazip.com)
-sed -i "s/103.102.45.151/$serverip/" client_pre.bat
+sed -i "s/103.102.45.151/$serverip/" /etc/openvpn/client/client_pre.bat
 
 #下载udpspeeder和udp2raw （amd64版）
 mkdir /usr/src/udp
