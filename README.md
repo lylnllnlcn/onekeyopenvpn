@@ -1,6 +1,8 @@
 # onekeyopenvpn
 本游戏代理方案使用openvpn+udp2raw+udpspeeder
 
+适用centos7服务器
+
 udpspeeder、udp2raw软件的作者为@wangyu-，github：https://github.com/wangyu-
 
 ### 服务端 ###
