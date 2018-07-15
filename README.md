@@ -1,7 +1,7 @@
 # onekeyopenvpn
-方案openvpn+udpspeeder+udp2raw
+本游戏代理方案使用openvpn+udp2raw+udpspeeder
 
-udpspeeder、udp2raw作者wangyu，github：https://github.com/wangyu-
+udpspeeder、udp2raw软件的作者为@wangyu-，github：https://github.com/wangyu-
 
 ### 服务端 ###
 
