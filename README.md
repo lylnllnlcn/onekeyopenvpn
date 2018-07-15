@@ -1,13 +1,18 @@
 # onekeyopenvpn
 方案openvpn+udpspeeder+udp2raw
+
 udpspeeder、udp2raw作者wangyu，github：https://github.com/wangyu-
 
 服务端
 
 使用一键搭建脚本
+
 bash <(curl -L -s https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/onekeyopenvpn.sh)
+
 检查一下是否安装正确，执行下面命令
+
 ps aux |grep -e openvpn -e speeder -e udp2raw|grep -v grep
+
 显示三行，内容分别包含speeder、udp2raw、openvpn就ok了
 
 
