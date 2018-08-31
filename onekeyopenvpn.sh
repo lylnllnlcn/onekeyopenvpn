@@ -97,7 +97,7 @@ curl -o udp2raw https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/mast
 chmod +x speederv2 udp2raw
 
 #启动udpspeeder和udp2raw
-nohup ./speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:1194 -f2:2 --mode 0 --timeout 1 >speeder.log 2>&1 &
+nohup ./speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:1194 -f20:10 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:9999  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &
 
 #启动openvpn
@@ -110,7 +110,7 @@ cat > /etc/rc.d/init.d/openv<<-EOF
 #description:openv
 
 cd /usr/src/udp
-nohup ./speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:1194 -f2:2 --mode 0 --timeout 1 >speeder.log 2>&1 &
+nohup ./speederv2 -s -l0.0.0.0:9999 -r127.0.0.1:1194 -f20:10 --mode 0 -q1 >speeder.log 2>&1 &
 nohup ./udp2raw -s -l0.0.0.0:9898 -r 127.0.0.1:9999  --raw-mode faketcp  -a -k passwd >udp2raw.log 2>&1 &
 systemctl start openvpn@server
 EOF
