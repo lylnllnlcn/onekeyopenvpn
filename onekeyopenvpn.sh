@@ -129,7 +129,7 @@ echo " 作者：atrandys"
 echo " 网站：www.atrandys.com"
 echo " Youtube：atrandys"
 echo "========================="
-read -p "需要重启VPS是否现在重启 ? [Y/n] :" yn
+read -p "建议重启一下VPS，是否现在重启 ? [Y/n] :" yn
 	[ -z "${yn}" ] && yn="y"
 	if [[ $yn == [Yy] ]]; then
 		echo -e "${Info} VPS 重启中..."
