@@ -76,18 +76,18 @@ echo "net.ipv4.ip_forward = 1" >> /etc/sysctl.conf
 #配置服务端server.conf
 cd /etc/openvpn
 rm -f server.conf
-curl -o server.conf https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/server.conf
+curl -o server.conf https://raw.githubusercontent.com/atrandys/onekeyopenvpn/master/server.conf
 
 #将openvpn客户端文件下载到client
-curl -o /etc/openvpn/client/client.ovpn https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/client.ovpn
+curl -o /etc/openvpn/client/client.ovpn https://raw.githubusercontent.com/atrandys/onekeyopenvpn/master/client.ovpn
 
 #下载客户端udp程序
-#wget -P /etc/openvpn/client/ https://github.com/yobabyshark/onekeyopenvpn/raw/master/udp2raw.exe
-#wget -P /etc/openvpn/client/ https://github.com/yobabyshark/onekeyopenvpn/raw/master/speederv2.exe
+#wget -P /etc/openvpn/client/ https://github.com/atrandys/onekeyopenvpn/raw/master/udp2raw.exe
+#wget -P /etc/openvpn/client/ https://github.com/atrandys/onekeyopenvpn/raw/master/speederv2.exe
 
 #下载客户端脚本
-curl -o /etc/openvpn/client/client_pre.bat https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/client_pre.bat
-curl -o /etc/openvpn/client/client_down.bat https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/client_down.bat
+curl -o /etc/openvpn/client/client_pre.bat https://raw.githubusercontent.com/atrandys/onekeyopenvpn/master/client_pre.bat
+curl -o /etc/openvpn/client/client_down.bat https://raw.githubusercontent.com/atrandys/onekeyopenvpn/master/client_down.bat
 
 #修改client_pre脚本ip
 serverip=$(curl icanhazip.com)
@@ -96,8 +96,8 @@ sed -i "s/103.102.45.151/$serverip/" /etc/openvpn/client/client_pre.bat
 #下载udpspeeder和udp2raw （amd64版）
 mkdir /usr/src/udp
 cd /usr/src/udp
-curl -o speederv2 https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/speederv2
-curl -o udp2raw https://raw.githubusercontent.com/yobabyshark/onekeyopenvpn/master/udp2raw
+curl -o speederv2 https://raw.githubusercontent.com/atrandys/onekeyopenvpn/master/speederv2
+curl -o udp2raw https://raw.githubusercontent.com/atrandys/onekeyopenvpn/master/udp2raw
 chmod +x speederv2 udp2raw
 
 #启动udpspeeder和udp2raw
